@@ -115,3 +115,14 @@ const tenGames = async () => {
 init();
 document.querySelector('#playButton').addEventListener("click", startGame);
 document.querySelector('#tenGamesButton').addEventListener("click", tenGames);
+
+//Modal 
+const modal = document.querySelector("#infoModal");
+document.querySelector(".close").addEventListener("click", () => {
+    modal.style.display = "none";
+})
+window.addEventListener("click", ({ target }) => {
+    if (target == modal) {
+        modal.style.display = "none";
+      }
+})

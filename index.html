@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
-        <title>Zombieuppgift</title>
-    </head>
-    <body>
-        <h1 id="currentRound">Rounds: 0</h1>
-        <section id="container" class="container"></section>
-        <div id="zombie" class="container zombieDiv"></div>
-        <div class="controlAndResult">
-            <div class="control">
-                <button id="playButton" class="playButton">Spela</button>
-                <button id="tenGamesButton" class="playButton">
-                    Spela 10st spel
-                </button>
-                <button onclick="resetResults()" class="resetButton">
-                    Nollställ
-                </button>
-            </div>
-            <div class="result">
-                <ul class="ulResult" id="gameResults"></ul>
-            </div>
-        </div>
-        <script type="text/javascript" src="main.js"></script>
-    </body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="styles.css" />
+      <title>Zombieuppgift</title>
+   </head>
+   <body>
+      <h1 id="currentRound">Rundor: 0</h1>
+      <section id="container" class="container"></section>
+      <div id="zombie" class="container zombieDiv"></div>
+      <div class="controlAndResult">
+         <div class="control">
+            <button id="playButton" class="playButton">Spela</button>
+            <button id="tenGamesButton" class="playButton">
+               Spela 10st spel
+            </button>
+            <button onclick="resetResults()" class="resetButton">
+               Nollställ
+            </button>
+         </div>
+         <div class="result">
+            <ul class="ulResult" id="gameResults"></ul>
+         </div>
+      </div>
+
+
+      <!-- The Modal -->
+<div id="infoModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Zombieuppgift</h2>
+      </div>
+      <div class="modal-body">
+        <p>Åh nej! En zombie har tagit sig till byn</p>
+        <p>Första omgången börjar med att zombien väljer ett random hus och infekterar detta.</p>
+        <p>Runda två så väljer båda zombisarna ett random hus var, kan vara samma kan vara olika. Om en zombie väljer ett hus som redan är infekteras ökas inte antalet zombies till nästa runda</p>
+        <p>Hur många rundor tar det att infektera hela byn?</p>
+      </div>
+
+    </div>
+  
+  </div>
+      <script type="text/javascript" src="main.js"></script>
+   </body>
 </html>
